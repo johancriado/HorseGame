@@ -279,7 +279,7 @@
                             android:layout_width="0dp"
                             android:layout_height="43dp"
                             android:background="@color/white_cell"
-                            android:src="@drawable/icon"/>
+                            android:src="@drawable/caballo"/>
                         <ImageView
                             android:id="@+id/c17"
                             android:tag="c17"
@@ -871,11 +871,73 @@
                     </TableRow>
 
                 </TableLayout>
-                <!--<LinearLayout
-                    android:layout_width=""
-                    android:layout_height="">
 
-                </LinearLayout>-->
+                <LinearLayout
+                    android:id="@+id/lyMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/message_bd"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvIntroLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/amaranth_regular"
+                        android:shadowColor="@color/white"
+                        android:shadowRadius="8"
+                        android:text="Level: 1"
+                        android:textColor="@color/app_color_dark"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:id="@+id/tvIntroLives"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/amaranth_regular"
+                        android:shadowColor="@color/white"
+                        android:shadowRadius="8"
+                        android:text="Lives: 1"
+                        android:textColor="@color/app_color_dark"
+                        android:textSize="45sp"/>
+
+                    <TextView
+                        android:id="@+id/tvAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/bg_title_top"
+                        android:fontFamily="@font/amaranth_regular"
+                        android:paddingTop="10dp"
+                        android:onClick="launchAction"
+                        android:text="Next Level"
+                        android:textAlignment="center"
+                        android:textColor="@color/app_color_light"
+                        android:textSize="24sp"/>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:id="@+id/ibtShare"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginBottom="40dp"
+                        android:background="@drawable/bg_title_bottom"
+                        android:onClick="launchShareGame"
+                        android:visibility="visible"
+                        android:src="@drawable/share"/>
+
+                </LinearLayout>
+
             </RelativeLayout>
 
             <TextView
