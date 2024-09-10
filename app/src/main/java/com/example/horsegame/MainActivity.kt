@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
     private var cellSelected_x = 0
     private var cellSelected_y = 0
 
+    private lateinit var board: Array<IntArray>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,7 +30,25 @@ class MainActivity : AppCompatActivity() {
             insets
         }*/
         initScreegame()
+        resetBoard()
         setFirstPosition()
+    }
+
+    private fun resetBoard() {
+        // 0 esta libre
+        // 1 casilla marcada
+        // 2 es un bonus
+        // 9 es una opcion del movimiento actual
+        board = arrayOf(
+            intArrayOf(0, 0, 0, 0, 0, 0, 0, 0),
+            intArrayOf(0, 0, 0, 0, 0, 0, 0, 0),
+            intArrayOf(0, 0, 0, 0, 0, 0, 0, 0),
+            intArrayOf(0, 0, 0, 0, 0, 0, 0, 0),
+            intArrayOf(0, 0, 0, 0, 0, 0, 0, 0),
+            intArrayOf(0, 0, 0, 0, 0, 0, 0, 0),
+            intArrayOf(0, 0, 0, 0, 0, 0, 0, 0),
+            intArrayOf(0, 0, 0, 0, 0, 0, 0, 0)
+        )
     }
 
     private fun setFirstPosition() {
@@ -43,6 +63,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectCell(x: Int, y: Int) {
+        board[x][y] = 1
         paintHorseCell(cellSelected_x, cellSelected_y, "previus_cell")
         cellSelected_x = x
         cellSelected_y = y
